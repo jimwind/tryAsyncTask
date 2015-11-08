@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tryasynctask.MainActivity" >
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edittext" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progress"
+        android:text="开始下载" />
+
+    <RelativeLayout
+        android:id="@+id/imageview_layout"
+        android:layout_below="@id/button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.example.tryasynctask.MyImageView
+            android:id="@+id/imageview"
+            android:scaleType="fitStart"
+            android:background="#ff00ff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>
